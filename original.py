@@ -38,7 +38,7 @@ with tf.Session() as sess:
             cnt = 0
             for i in range(10):
                 for j in range(4):
-                    a[j][i].imshow(batch_x[cnt, :, :, :])
+                    a[j][i].imshow(batch_x[cnt, :, :, ::-1])
                     cnt += 1
             f.savefig("faces_original/faces_%d_%d.png" % (epoch, step))
             plt.close()
