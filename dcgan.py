@@ -158,6 +158,6 @@ with tf.Session() as sess:
             for j in range(4):
                 # Generate image from noise. Extend to 3 channels for matplot figure.
                 img = g[j]
-                a[j][i].imshow(img)
+                a[j][i].imshow(img[:, :, ::-1])
         f.savefig("faces_result/faces_%d.png" % epoch)
         plt.close()
